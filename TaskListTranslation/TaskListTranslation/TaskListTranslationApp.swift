@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct TaskListTranslationApp: App {
+    @State private var viewModel = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environment(viewModel)
         }
     }
 }
